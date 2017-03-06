@@ -40,7 +40,7 @@ def setData(request):
          
         if form.is_valid():# 如果提交的数据合法
             key = form.cleaned_data['key']
-            values = form.cleaned_data['values']
+            values = form.cleaned_data['values'].encode('utf-8')
             dataInit.dataDict[key] = values
             print(key, dataInit.dataDict[key])
 
