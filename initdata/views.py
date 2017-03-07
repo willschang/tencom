@@ -13,8 +13,9 @@ from .forms import SetDataForm
 dataInit = utils.data_initial
 
 def index(request):  
-    context = {'data_dict': dataInit.dataDict}
-    return render(request, 'initdata/index.html', context)
+    # context = {'data_dict': dataInit.dataDict}
+    # return render(request, 'initdata/index.html', context)
+    return HttpResponse(len(dataInit.dataDict))
 
 def getData(request, key_id):
     print(key_id)
@@ -33,9 +34,9 @@ def setData(request):
             dataInit.dataDict[key] = values
             # print(key, dataInit.dataDict[key])
 
-            # return HttpResponse(dataInit.dataDict[key])
+            return HttpResponse(dataInit.dataDict[key])
             # 重定向到其他页面
-            return HttpResponseRedirect('/initdata/')
+            # return HttpResponseRedirect('/initdata/')
      
     else:# 当正常访问时
         form = SetDataForm()
