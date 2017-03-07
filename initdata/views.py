@@ -32,11 +32,11 @@ def setData(request):
             values = form.cleaned_data['values']
             dataInit.dataDict[key] = values
             # print(key, dataInit.dataDict[key])
-            redata = key + ': ' + values
+            # redata = key + ': ' + values
 
-            return HttpResponse(redata)
+            # return HttpResponse(redata)
             # 重定向到其他页面
-            # return HttpResponseRedirect('/initdata/')
+            return HttpResponseRedirect('/initdata/')
      
     else:# 当正常访问时
         form = SetDataForm()
