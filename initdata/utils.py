@@ -10,7 +10,8 @@ class DataIniting():
 
         for i in range(10):
             self.dataDict[str(i)] = 'tensorflow' + str(i) 
-        print("初始化数据到内存中=========")
+        # print("初始化数据到内存中=========")
+        print('==========')
 
     def get_data_dict(self):
         data_dict = self.dataDict
