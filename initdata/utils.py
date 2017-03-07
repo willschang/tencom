@@ -8,9 +8,9 @@ class DataIniting():
     def __init__(self):
         self.dataDict = {}
 
-        for i in range(100):
+        for i in range(20):
             self.dataDict[str(i)] = 'tensorflow' + str(i) 
-        print('==========')
+        print('====initial data======')
         print(self.dataDict)
 
     def get_data_dict(self):

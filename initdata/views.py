@@ -9,13 +9,12 @@ from . import utils
 
 from .forms import SetDataForm
 
-# dataInit = utils.DataIniting()
 dataInit = utils.data_initial
 
 def index(request):  
-    # context = {'data_dict': dataInit.dataDict}
-    # return render(request, 'initdata/index.html', context)
-    return HttpResponse(len(dataInit.dataDict))
+    context = {'data_dict': dataInit.dataDict}
+    return render(request, 'initdata/index.html', context)
+    # return HttpResponse(len(dataInit.dataDict))
 
 def getData(request, key_id):
     print(key_id)
@@ -33,8 +32,9 @@ def setData(request):
             values = form.cleaned_data['values']
             dataInit.dataDict[key] = values
             # print(key, dataInit.dataDict[key])
+            redata = key + ': ' + values
 
-            return HttpResponse(dataInit.dataDict[key])
+            return HttpResponse(redata)
             # 重定向到其他页面
             # return HttpResponseRedirect('/initdata/')
      
