@@ -25,7 +25,7 @@ SECRET_KEY = 'et476^gvbu3@pa!uqwx08*@kq(k_*a)r&qd6my@9c6^+vl9#-7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'192.168.1.107']
+# ALLOWED_HOSTS = [u'192.168.1.107']
 
 
 # Application definition
@@ -66,6 +66,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
         },
+
     },
 ]
 
@@ -116,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-Hans'
 
 TIME_ZONE = 'UTC'
 
@@ -133,9 +134,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = (
-        os.path.join(BASE_DIR, 'tencom/templates'),
-                )
+
 
 
 
