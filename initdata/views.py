@@ -12,7 +12,7 @@ from .forms import SetDataForm
 dataInit = utils.DataIniting()
 
 def index(request):
-    print(dataInit.dataDict)   
+    # print(dataInit.dataDict)   
 
     context = {'data_dict': dataInit.dataDict}
     return render(request, 'initdata/index.html', context)
@@ -20,7 +20,7 @@ def index(request):
 def getData(request, key_id):
     print(key_id)
     data = dataInit.dataDict.get(key_id, 'none')
-    print(data)
+    # print(data)
     redata = key_id + ': ' + data
 
     return HttpResponse(redata)
