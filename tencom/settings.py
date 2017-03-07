@@ -136,6 +136,8 @@ STATIC_URL = '/static/'
 
 
 from initdata.utils import data_initial
+data = data_initial.get_data_dict()
+print(data)
 # data = data_initial.get_data_dict()
 # print(data)
 

@@ -8,10 +8,10 @@ class DataIniting():
     def __init__(self):
         self.dataDict = {}
 
-        for i in range(10):
+        for i in range(1000000):
             self.dataDict[str(i)] = 'tensorflow' + str(i) 
-        # print("初始化数据到内存中=========")
         print('==========')
+        print(self.dataDict)
 
     def get_data_dict(self):
         data_dict = self.dataDict
