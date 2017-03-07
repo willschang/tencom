@@ -33,7 +33,7 @@ def setData(request):
             key = form.cleaned_data['key']
             values = form.cleaned_data['values']
             dataInit.dataDict[key] = values
-            print(key, dataInit.dataDict[key])
+            # print(key, dataInit.dataDict[key])
 
             # return HttpResponse(dataInit.dataDict[key])
             # 重定向到其他页面
