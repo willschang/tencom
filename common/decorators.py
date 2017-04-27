@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-
+##
 def singleton(cls, *args, **kw):
     '''
     单例模式 使用装饰器(decorator)
